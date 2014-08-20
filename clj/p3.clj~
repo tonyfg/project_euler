@@ -1,0 +1,10 @@
+;;Q: What is the largest prime factor of the number 600851475143?
+
+(defn is-prime [n]
+  (let [n (int n)]
+    (if (zero? (rem n (int 2)))
+      false
+      (not-any? zero?
+		(map rem
+		     (take-nth 2 (range 3 (+ (. Math sqrt n) 1)))
+		     2)))))

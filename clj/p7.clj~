@@ -1,0 +1,25 @@
+;;Q: What is the 10001st prime number?
+;;A: 104743
+
+;; (defn is-prime [n]
+;;   (not-any? zero? (map rem (repeat n) (range 2 n))))
+
+;; (loop [i 1, n 1]
+;;   (if (= n 10001)
+;;     i
+;;     (if (is-prime i)
+;;       (recur (inc i) (inc n))
+;;       (recur (inc i) n))))
+
+
+(defn p [n]
+  (let [logn (Math/log n), loglogn (Math/log logn)]
+    (* n (+ logn (dec loglogn) (/ (* 1.8 loglogn) logn)))))
+
+(defn prime-at-idx [i]
+  (loop [primes [1], numbers (set (range 2 (p i)))]
+    (if (empty? numbers)
+      (last primes)
+;; Recur com a lista com os multiplos de n removidos e com os primos mais
+;; o 1o elemento da lista de nums
+      (recur (conj primes (first numbers)
