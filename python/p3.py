@@ -22,4 +22,3 @@ while i < max:
             print(str(i))
             break
     i += 2
-
