@@ -2,11 +2,11 @@
 #A: 4613732
 
 def fib(n):
-    result = []
+    result = 0
     a, b = 0, 1
     while b < n:
-        result.append(b)
-        a, b = b, a+b
+       if b % 2 == 0: result += b
+       a, b = b, a+b
     return result
 
-print sum([i for i in fib(4000001) if i%2==0])
+fib(4000000)
