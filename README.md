@@ -1,7 +1,7 @@
 # Project Euler solutions
 
-This is my implementation of some Project Euler problems in a few programming languages.
-This is usually my go-to when learning a new programming language so don't be too scared by the uglyness of the code.
+This is my implementation of some Project Euler problems in several programming languages.
+This is usually my go-to when learning a new programming language so don't be too scared by the ugliness of the code.
 
 
 [![WTFPL][2]][1]

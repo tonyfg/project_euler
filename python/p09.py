@@ -4,9 +4,9 @@
 found = False
 m = 2
 while not found:
-    for n in xrange(1, m):
+    for n in range(1, m):
         a, b, c = 2*m*n, m**2-n**2, m**2+n**2
         if a+b+c == 1000:
-            print str(a*b*c)
+            print(str(a*b*c))
             found = True
     m += 1
